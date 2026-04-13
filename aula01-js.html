@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AULA01 - JAVASCRIPT</title>
-</head>
+    
 <body>
     
     <input type="text" id="teste">
     <button onclick="enviar()">Enviar</button>
-
+    <div  id="resultado"></div>
 </body>
 
 
@@ -30,10 +30,15 @@
     document.write(estudando);
 
     let teste = document.getElementById("teste");
+    let areaTexto = document.getElementById("resultado")
 
     function enviar(){ 
-        document.write(teste);
+        let mesagem = teste.value;
+        //PEGAMOS O .value PARA VER O TEXTO 
+        alert("Você digitou:"+ mesagem);
+        areaTexto.innerHTML = "<h3>Voce digitou:" + mesagem + "</h3"
     }
 
 </script>
+
 </html>
